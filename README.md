@@ -1,6 +1,6 @@
-###**> npx tsc index.ts**    
+      ###**> npx tsc index.ts**    
 
-###**> node index.js**
+      ###**> node index.js**
       
       { age: 25, name: 'novem', isAdmin: true }
       25 type isnumber
