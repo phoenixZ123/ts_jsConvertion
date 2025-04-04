@@ -22,3 +22,10 @@ var color = [233, 0, 0];
 var redColor = [255, 0, 0];
 var red = redColor[0], green = redColor[1], blue = redColor[2];
 console.log(red);
+var Input = ["novem", true, 25];
+var s = Input[0], b = Input[1], n = Input[2];
+console.log(s);
+var InputUser = function (firstname, lastname) {
+    return firstname + " " + lastname;
+};
+console.log(InputUser("novem", "Wai"));

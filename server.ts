@@ -39,3 +39,15 @@ const redColor:colorTuple=[255,0,0];
 
 const [red,green,blue]=redColor;
 console.log(red);
+
+type InputType=[str:string,Boo:boolean,num:number];
+
+const Input:InputType=["novem",true,25];
+
+const [s,b,n]=Input;
+console.log(s);
+
+const InputUser=(firstname:string,lastname:string)=>{
+  return firstname +" "+ lastname;
+}
+console.log(InputUser("novem","Wai"));
