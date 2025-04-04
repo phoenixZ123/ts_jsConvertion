@@ -51,3 +51,10 @@ const InputUser=(firstname:string,lastname:string)=>{
   return firstname +" "+ lastname;
 }
 console.log(InputUser("novem","Wai"));
+
+type Func=(a:number,b:number)=> number;
+
+const Add:Func=(a,b)=>{
+  return a+b;
+}
+console.log(Add(2,3));

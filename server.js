@@ -29,3 +29,7 @@ var InputUser = function (firstname, lastname) {
     return firstname + " " + lastname;
 };
 console.log(InputUser("novem", "Wai"));
+var Add = function (a, b) {
+    return a + b;
+};
+console.log(Add(2, 3));
