@@ -1,9 +1,7 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-var add = function (a, b) {
-    return a + b;
-};
-exports.default = add;
+// const add = (a: number, b: number) => {
+//   return a + b;
+// };
+// export default add;
 var person = {
     age: 25,
     name: "novem",
@@ -29,7 +27,16 @@ var InputUser = function (firstname, lastname) {
     return firstname + " " + lastname;
 };
 console.log(InputUser("novem", "Wai"));
-var Add = function (a, b) {
-    return a + b;
-};
-console.log(Add(2, 3));
+function add(a, b) {
+    if (typeof a === "string" && typeof b === "string") {
+        return a.concat(b);
+    }
+    else if (typeof a === "number" && typeof b === "number") {
+        return a + b;
+    }
+    throw new Error("Invalid Argument");
+}
+var numberValue = add(10, 20);
+var stringValue = add("novem", "wai");
+console.log("Number addition = " + numberValue);
+console.log("String addition = " + stringValue);
