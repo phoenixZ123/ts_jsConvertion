@@ -62,3 +62,20 @@ var Developer = {
     role: "senior",
 };
 console.log(Developer.name + Developer.age + Developer.role);
+var Stu = {
+    id: 1,
+    name: "Novem"
+};
+Stu.name = "Austin Wai";
+console.log(Stu.name);
+var userone = "age";
+console.log(userone);
+var appConfig = {
+    name: "novem wai",
+    dev: "junior"
+};
+var NextWorker = {
+    name: "john derek",
+    dev: "senior"
+};
+console.log(NextWorker);

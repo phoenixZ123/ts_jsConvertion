@@ -127,3 +127,35 @@ const Developer: EmployeeType = {
   role: "senior",
 };
 console.log(Developer.name + Developer.age+Developer.role);
+
+type student={
+  readonly id:number,
+  name:string,
+}
+const Stu ={
+  id:1,
+  name:"Novem"
+}
+Stu.name="Austin Wai";
+console.log(Stu.name)
+
+interface User{
+  name:string,
+  age:number
+}
+
+
+const userone:keyof User="age"
+console.log(userone)
+
+const appConfig={
+  name:"novem wai",
+  dev:"junior"
+}
+type NextType=typeof appConfig
+
+const NextWorker:NextType={
+  name:"john derek",
+  dev:"senior"
+}
+console.log(NextWorker)
