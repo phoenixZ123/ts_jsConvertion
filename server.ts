@@ -76,5 +76,54 @@ function add(a: number | string, b: number | string): number | string {
 }
 const numberValue = add(10, 20);
 const stringValue = add("novem", "wai");
-console.log("Number addition = "+numberValue);
-console.log("String addition = "+stringValue);
+console.log("Number addition = " + numberValue);
+console.log("String addition = " + stringValue);
+
+type TypeA = { name: string };
+type TypeB = { age: number };
+type People = TypeA & TypeB;
+
+const people: People = {
+  name: "ppw",
+  age: 35,
+};
+console.log(people);
+
+interface Person {
+  name: string;
+  age: number;
+}
+interface Employee extends Person {
+  role: string;
+}
+const employeeOne: Employee = {
+  name: "Alice",
+  age: 25,
+  role: "Dev",
+};
+console.log(employeeOne);
+
+interface PrintFn {
+  (str: string): void;
+}
+const printFn: PrintFn = (log) => {
+  console.log(log);
+};
+
+type MyType = {
+  readonly property: string;
+};
+
+let noArray: readonly number[] = [1, 2];
+console.log(noArray);
+type EmployeeType = {
+  readonly name: string;
+  readonly age: number;
+  readonly role: string;
+};
+const Developer: EmployeeType = {
+  name: "John",
+  age: 25,
+  role: "senior",
+};
+console.log(Developer.name + Developer.age+Developer.role);

@@ -40,3 +40,25 @@ var numberValue = add(10, 20);
 var stringValue = add("novem", "wai");
 console.log("Number addition = " + numberValue);
 console.log("String addition = " + stringValue);
+var people = {
+    name: "ppw",
+    age: 35,
+};
+console.log(people);
+var employeeOne = {
+    name: "Alice",
+    age: 25,
+    role: "Dev",
+};
+console.log(employeeOne);
+var printFn = function (log) {
+    console.log(log);
+};
+var noArray = [1, 2];
+console.log(noArray);
+var Developer = {
+    name: "John",
+    age: 25,
+    role: "senior",
+};
+console.log(Developer.name + Developer.age + Developer.role);
