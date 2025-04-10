@@ -64,7 +64,7 @@ var Developer = {
 console.log(Developer.name + Developer.age + Developer.role);
 var Stu = {
     id: 1,
-    name: "Novem"
+    name: "Novem",
 };
 Stu.name = "Austin Wai";
 console.log(Stu.name);
@@ -72,10 +72,26 @@ var userone = "age";
 console.log(userone);
 var appConfig = {
     name: "novem wai",
-    dev: "junior"
+    dev: "junior",
 };
 var NextWorker = {
     name: "john derek",
-    dev: "senior"
+    dev: "senior",
 };
 console.log(NextWorker);
+var stu = {
+    id: 1,
+    name: "human",
+    address: "Ygn",
+};
+console.log(stu);
+var Emp = {
+    name: "John",
+    age: "25",
+    email: "john@gmail.com",
+};
+var indentity = function (value) {
+    return value;
+};
+var str = indentity("Hello");
+console.log(str);

@@ -126,36 +126,70 @@ const Developer: EmployeeType = {
   age: 25,
   role: "senior",
 };
-console.log(Developer.name + Developer.age+Developer.role);
+console.log(Developer.name + Developer.age + Developer.role);
 
-type student={
-  readonly id:number,
-  name:string,
+type student = {
+  readonly id: number;
+  name: string;
+};
+const Stu = {
+  id: 1,
+  name: "Novem",
+};
+Stu.name = "Austin Wai";
+console.log(Stu.name);
+
+interface User {
+  name: string;
+  age: number;
 }
-const Stu ={
-  id:1,
-  name:"Novem"
-}
-Stu.name="Austin Wai";
-console.log(Stu.name)
 
-interface User{
-  name:string,
-  age:number
-}
+const userone: keyof User = "age";
+console.log(userone);
 
+const appConfig = {
+  name: "novem wai",
+  dev: "junior",
+};
+type NextType = typeof appConfig;
 
-const userone:keyof User="age"
-console.log(userone)
+const NextWorker: NextType = {
+  name: "john derek",
+  dev: "senior",
+};
+console.log(NextWorker);
+type DoubleCheck = keyof typeof appConfig;
 
-const appConfig={
-  name:"novem wai",
-  dev:"junior"
-}
-type NextType=typeof appConfig
+type index = {
+  id: number;
+};
 
-const NextWorker:NextType={
-  name:"john derek",
-  dev:"senior"
-}
-console.log(NextWorker)
+type person = {
+  name: string;
+  address: string;
+};
+type Obj = index & person;
+const stu: Obj = {
+  id: 1,
+  name: "human",
+  address: "Ygn",
+};
+console.log(stu);
+
+type userKeys = "name" | "age" | "email";
+
+type UserOne = {
+  [keys in userKeys]: string;
+};
+
+const Emp: UserOne = {
+  name: "John",
+  age: "25",
+  email: "john@gmail.com",
+};
+
+const indentity = <T>(value: T): T => {
+  return value;
+};
+let str = indentity("Hello");
+console.log(str);
