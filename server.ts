@@ -246,3 +246,11 @@ const user3 = {
   age: 12,
 } satisfies data;
 console.log(user2);
+
+type user = {
+  id: number;
+  name: string;
+  about: string;
+  add: string;
+};
+type userSummary = Pick<user, "id" | "name">;
