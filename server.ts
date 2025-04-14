@@ -176,7 +176,7 @@ const stu: Obj = {
 };
 console.log(stu);
 
-type userKeys = "name" | "age" | "email";
+type userKeys = "name" | "age" | "email" | "role";
 
 type UserOne = {
   [keys in userKeys]: string;
@@ -186,10 +186,53 @@ const Emp: UserOne = {
   name: "John",
   age: "25",
   email: "john@gmail.com",
+  role: "senior",
 };
 
-const indentity = <T>(value: T): T => {
+const indentity = <strg>(value: strg): strg => {
   return value;
 };
-let str = indentity("Hello");
+let str = indentity(12);
 console.log(str);
+
+type test = { id: number; name: string; age: number };
+
+const identity = <T>(value: T): T => {
+  return value;
+};
+
+const ppw: test = {
+  id: 1,
+  name: "test",
+  age: 23,
+};
+console.log(identity(ppw));
+
+const resultRes = <T>(data: T): { success: Boolean; data: T } => {
+  return {
+    success: true,
+    data: data,
+  };
+};
+
+console.log(resultRes("Khin phyu phyu kyAW"));
+
+type resResponse<T> = {
+  data: T;
+  success: boolean;
+};
+const result: resResponse<number> = {
+  data: 10,
+  success: true,
+};
+console.log(typeof result);
+
+type data = {
+  id: number;
+  name: string;
+};
+const responseData = JSON.parse('{"id":2,"name":"ppw"}');
+
+const resPonse = responseData as data;
+
+console.log(resPonse);

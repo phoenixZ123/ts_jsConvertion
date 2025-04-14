@@ -89,9 +89,35 @@ var Emp = {
     name: "John",
     age: "25",
     email: "john@gmail.com",
+    role: "senior",
 };
 var indentity = function (value) {
     return value;
 };
-var str = indentity("Hello");
+var str = indentity(12);
 console.log(str);
+var identity = function (value) {
+    return value;
+};
+var ppw = {
+    id: 1,
+    name: "test",
+    age: 23,
+};
+console.log(identity(ppw));
+var resultRes = function (data) {
+    return {
+        success: true,
+        data: data,
+    };
+};
+console.log(resultRes("Khin phyu phyu kyAW"));
+var result = {
+    data: 10,
+    success: true,
+};
+console.log(typeof result);
+var responseData = JSON.parse('{"id":2,"name":"ppw"}');
+var resPonse = responseData;
+console.log(resPonse);
+
