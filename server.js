@@ -120,4 +120,12 @@ console.log(typeof result);
 var responseData = JSON.parse('{"id":2,"name":"ppw"}');
 var resPonse = responseData;
 console.log(resPonse);
-
+var user2 = {
+    id: 20,
+    name: "KPPK",
+};
+// const user3 = {
+//   id: 22,
+//   name: 12,
+// } satisfies data;
+console.log(user2);

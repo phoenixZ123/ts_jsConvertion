@@ -229,10 +229,20 @@ console.log(typeof result);
 
 type data = {
   id: number;
-  name: string;
+  name: string | number;
 };
 const responseData = JSON.parse('{"id":2,"name":"ppw"}');
 
 const resPonse = responseData as data;
 
 console.log(resPonse);
+
+const user2 = {
+  id: 20,
+  name: "KPPK",
+} satisfies data;
+const user3 = {
+  id: 22,
+  age: 12,
+} satisfies data;
+console.log(user2);
