@@ -133,4 +133,16 @@ var partialOmit = {
     about: "erer",
     add: "ygn",
 };
+var requiredData = {
+    id: 4,
+    name: "kkp",
+    about: "wre",
+    add: "efee",
+};
 console.log(partialOmit);
+console.log(requiredData);
+var recordData = {
+    id: "23",
+    name: "ppw",
+};
+console.log(recordData);

@@ -266,4 +266,22 @@ const partialOmit: retrieveType = {
   about: "erer",
   add: "ygn",
 };
+type newRequired = Required<partialUser>;
+
+const requiredData: newRequired = {
+  id: 4,
+  name: "kkp",
+  about: "wre",
+  add: "efee",
+};
 console.log(partialOmit);
+console.log(requiredData);
+
+// Record method is write in <ValueName,type>
+
+type record = Record<"id" | "name", string>;
+const recordData: record = {
+  id: "23",
+  name: "ppw",
+};
+console.log(recordData);
