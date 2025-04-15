@@ -254,3 +254,16 @@ type user = {
   add: string;
 };
 type userSummary = Pick<user, "id" | "name">;
+
+type partialUser = {
+  id?: number;
+  name?: string;
+  about?: string;
+  add?: string;
+};
+type retrieveType = Omit<partialUser, "id" | "name">;
+const partialOmit: retrieveType = {
+  about: "erer",
+  add: "ygn",
+};
+console.log(partialOmit);

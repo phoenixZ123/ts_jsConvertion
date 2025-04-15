@@ -124,8 +124,13 @@ var user2 = {
     id: 20,
     name: "KPPK",
 };
-// const user3 = {
-//   id: 22,
-//   name: 12,
-// } satisfies data;
+var user3 = {
+    id: 22,
+    age: 12,
+};
 console.log(user2);
+var partialOmit = {
+    about: "erer",
+    add: "ygn",
+};
+console.log(partialOmit);
