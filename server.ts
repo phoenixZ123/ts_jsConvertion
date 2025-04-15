@@ -303,15 +303,27 @@ const teaData: Teacher = {
   class: "english",
 };
 
-const Attend = (user: Teacher | Student): string | undefined => {
-  switch (user.name) {
-    case "student":
-      return user.class;
-    case "teacher":
-      return user.class;
+// const Attend = (user: Teacher | Student): string | undefined => {
+//   switch (user.name) {
+//     case "student":
+//       return user.class;
+//     case "teacher":
+//       return user.class;
 
-    default:
-      return undefined;
+//     default:
+//       return undefined;
+//   }
+// };
+const Attend = (user: Teacher | Student): user is Student => {
+  return user.name === "student";
+};
+const checkAttend = (user: Teacher | Student) => {
+  if (Attend(user)) {
+    return `Teacher class: ${user.class}`;
+  } else {
+    // return `Student class: ${user.class}`;
   }
 };
-console.log("class = " + Attend(teaData));
+
+console.log(checkAttend(stuData)); // Student class: sec
+console.log(checkAttend(teaData));

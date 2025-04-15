@@ -154,14 +154,26 @@ var teaData = {
     name: "teacher",
     class: "english",
 };
+// const Attend = (user: Teacher | Student): string | undefined => {
+//   switch (user.name) {
+//     case "student":
+//       return user.class;
+//     case "teacher":
+//       return user.class;
+//     default:
+//       return undefined;
+//   }
+// };
 var Attend = function (user) {
-    switch (user.name) {
-        case "student":
-            return user.class;
-        case "teacher":
-            return user.class;
-        default:
-            return undefined;
+    return user.name === "student";
+};
+var checkAttend = function (user) {
+    if (Attend(user)) {
+        return "Teacher class: ".concat(user.class);
+    }
+    else {
+        // return `Student class: ${user.class}`;
     }
 };
-console.log("class = " + Attend(teaData));
+console.log(checkAttend(stuData)); // Student class: sec
+console.log(checkAttend(teaData));
