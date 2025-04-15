@@ -285,3 +285,33 @@ const recordData: record = {
   name: "ppw",
 };
 console.log(recordData);
+
+type Student = {
+  name: string;
+  class: string;
+};
+type Teacher = {
+  name: string;
+  class: string;
+};
+const stuData: Student = {
+  name: "student",
+  class: "sec",
+};
+const teaData: Teacher = {
+  name: "teacher",
+  class: "english",
+};
+
+const Attend = (user: Teacher | Student): string | undefined => {
+  switch (user.name) {
+    case "student":
+      return user.class;
+    case "teacher":
+      return user.class;
+
+    default:
+      return undefined;
+  }
+};
+console.log("class = " + Attend(teaData));

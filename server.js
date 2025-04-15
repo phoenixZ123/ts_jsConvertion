@@ -146,3 +146,22 @@ var recordData = {
     name: "ppw",
 };
 console.log(recordData);
+var stuData = {
+    name: "student",
+    class: "sec",
+};
+var teaData = {
+    name: "teacher",
+    class: "english",
+};
+var Attend = function (user) {
+    switch (user.name) {
+        case "student":
+            return user.class;
+        case "teacher":
+            return user.class;
+        default:
+            return undefined;
+    }
+};
+console.log("class = " + Attend(teaData));
