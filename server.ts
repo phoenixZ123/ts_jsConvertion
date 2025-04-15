@@ -327,3 +327,10 @@ const checkAttend = (user: Teacher | Student) => {
 
 console.log(checkAttend(stuData)); // Student class: sec
 console.log(checkAttend(teaData));
+type greeting = "Novem" | "Phoo";
+type dataOutput = `Hello ${greeting}`;
+
+const data1: dataOutput = "Hello Novem";
+const data2: dataOutput = "Hello Phoo";
+
+console.log(data1);

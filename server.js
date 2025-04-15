@@ -177,3 +177,6 @@ var checkAttend = function (user) {
 };
 console.log(checkAttend(stuData)); // Student class: sec
 console.log(checkAttend(teaData));
+var data1 = "Hello Novem";
+var data2 = "Hello Phoo";
+console.log(data1);
